@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholift | Reimagining School Management in Bihar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'scholift-green': {
+                            DEFAULT: '#25D366',
+                            light: '#DCF8C6',
+                            dark: '#128C7E'
+                        }
+                    },
+                    animation: {
+                        'subtle-bounce': 'bounce 2s infinite',
+                        'fade-in': 'fadeIn 1s ease-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="w-40 h-12 bg-scholift-green-light text-scholift-green-dark flex items-center justify-center font-bold rounded-lg">
+                    SCHOLIFT LOGO
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#features" class="text-scholift-green-dark hover:text-scholift-green transition-colors">Features</a>
+                <a href="#mission" class="text-scholift-green-dark hover:text-scholift-green transition-colors">Our Mission</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 animate-fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold text-scholift-green-dark leading-tight">
+                    Digitizing Bihar's School Ecosystem
+                </h1>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    We're crafting a transformative digital solution to empower schools across Bihar. Our platform aims to simplify administrative processes, enhance communication, and unlock educational potential.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="tel:+919334007868" class="bg-scholift-green text-white px-6 py-3 rounded-full hover:bg-scholift-green-dark transition-all flex items-center space-x-2 shadow-lg hover:shadow-xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                        </svg>
+                        <span>Contact Us</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hidden md:block animate-subtle-bounce">
+                <div class="bg-scholift-green-light/50 rounded-2xl p-8">
+                    <img src="/api/placeholder/500/400" alt="School Management Illustration" class="rounded-xl shadow-2xl">
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="bg-gray-50 py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-scholift-green-dark mb-12">
+                    What We're Building
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all group">
+                        <div class="bg-scholift-green-light/30 w-16 h-16 rounded-full mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-scholift-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-scholift-green-dark">Digital Attendance</h3>
+                        <p class="text-gray-600">Effortless tracking with single-tap technology, eliminating manual record complexities.</p>
+                    </div>
+                    <!-- Similar structure for other features -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-scholift-green-light py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-scholift-green-dark">© 2024 Scholift. Pioneering Digital Transformation in Bihar's Education.</p>
+        </div>
+    </footer>
+</body>
+</html>
