@@ -61,6 +61,69 @@
                     </div>
                 </div>
                 <div class="hero-image animate-slide-in">
+                    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchoLift - Empowering Bihar Schools (Under Development)</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/image-Photoroom.png" alt="SchoLift Logo" width="180">
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#why-scholift">Why SchoLift</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="animate-fade-in">Digitizing Schools Across Bihar</h1>
+                    <p class="animate-fade-in-delay">We're building SchoLift to help schools in Bihar manage attendance, fees, and more — all without technical expertise.</p>
+                    <div style="
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #25D366;
+  animation: bounce 0.5s ease-in-out infinite alternate;
+">
+  Coming Soon
+</div>
+
+<style>
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+  }
+</style>
+
+                    <div class="hero-buttons animate-fade-in-delay-2">
+                        <a href="tel:+919334007868" class="btn btn-primary">Call Us: +91 93340 07868</a>
+                    </div>
+                </div>
+                <div class="hero-image animate-slide-in">
                     <div class="management-animation">
                         <!-- Data Visualization Elements -->
                         
@@ -132,33 +195,6 @@
                           </div>
                         </div>
                         
-                        <!-- Notification Elements -->
-                        <div class="notification-area">
-                          <div class="notification notif1">
-                            <div class="notif-icon">📊</div>
-                            <div class="notif-content">
-                              <div class="notif-title">Attendance Report</div>
-                              <div class="notif-desc">Class 8A attendance is up by 7%</div>
-                            </div>
-                          </div>
-                          
-                          <div class="notification notif2">
-                            <div class="notif-icon">📝</div>
-                            <div class="notif-content">
-                              <div class="notif-title">Exam Schedule</div>
-                              <div class="notif-desc">Mid-term exams starting next week</div>
-                            </div>
-                          </div>
-                          
-                          <div class="notification notif3">
-                            <div class="notif-icon">💰</div>
-                            <div class="notif-content">
-                              <div class="notif-title">Fee Reminder</div>
-                              <div class="notif-desc">Annual fee due in 5 days</div>
-                            </div>
-                          </div>
-                        </div>
-                        
                         <!-- Data Lines -->
                         <div class="data-flow-container">
                           <div class="data-line line1"></div>
@@ -176,25 +212,28 @@
                             width: 100%;
                             height: 100%;
                             min-height: 400px;
-                            /* No background color for transparency */
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            padding: 20px;
+                            box-sizing: border-box;
                           }
                           
                           /* Charts Styling */
                           .chart {
-                            position: absolute;
                             background-color: rgba(255, 255, 255, 0.95);
                             border-radius: 10px;
                             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
                             padding: 15px;
                             opacity: 0;
                             transform: translateY(20px);
+                            margin: 10px;
+                            z-index: 2;
                           }
                           
                           .attendance-chart {
                             width: 240px;
                             height: 220px;
-                            top: 30px;
-                            left: 30px;
                             animation: fade-in-slide-up 0.5s forwards, float 3s ease-in-out infinite;
                             animation-delay: 0.2s, 0.7s;
                           }
@@ -202,8 +241,6 @@
                           .fees-chart {
                             width: 220px;
                             height: 220px;
-                            top: 50px;
-                            right: 40px;
                             animation: fade-in-slide-up 0.5s forwards, float 3s ease-in-out infinite;
                             animation-delay: 0.4s, 0.9s;
                           }
@@ -339,16 +376,14 @@
                           
                           /* Student Data Card Styling */
                           .data-card {
-                            position: absolute;
-                            bottom: 40px;
-                            left: 50%;
-                            transform: translateX(-50%) translateY(20px);
                             background-color: rgba(255, 255, 255, 0.95);
                             border-radius: 10px;
                             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
                             padding: 15px;
                             width: 260px;
                             opacity: 0;
+                            z-index: 2;
+                            margin: 10px;
                             animation: fade-in-slide-up 0.5s forwards, float 3s ease-in-out infinite;
                             animation-delay: 0.6s, 1.1s;
                           }
@@ -379,62 +414,6 @@
                             color: #0b78c1;
                           }
                           
-                          /* Notification Area */
-                          .notification-area {
-                            position: absolute;
-                            width: 240px;
-                            right: 30px;
-                            bottom: 30px;
-                          }
-                          
-                          .notification {
-                            display: flex;
-                            align-items: center;
-                            background-color: rgba(255, 255, 255, 0.95);
-                            border-radius: 8px;
-                            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-                            padding: 10px;
-                            margin-bottom: 10px;
-                            transform: translateX(50px);
-                            opacity: 0;
-                          }
-                          
-                          .notif1 {
-                            animation: slide-in-left 0.5s forwards, float 3s ease-in-out infinite;
-                            animation-delay: 1.5s, 2s;
-                          }
-                          
-                          .notif2 {
-                            animation: slide-in-left 0.5s forwards, float 3s ease-in-out infinite;
-                            animation-delay: 1.7s, 2.2s;
-                          }
-                          
-                          .notif3 {
-                            animation: slide-in-left 0.5s forwards, float 3s ease-in-out infinite;
-                            animation-delay: 1.9s, 2.4s;
-                          }
-                          
-                          .notif-icon {
-                            font-size: 18px;
-                            margin-right: 10px;
-                          }
-                          
-                          .notif-content {
-                            flex: 1;
-                          }
-                          
-                          .notif-title {
-                            font-size: 13px;
-                            font-weight: bold;
-                            color: #0b78c1;
-                          }
-                          
-                          .notif-desc {
-                            font-size: 11px;
-                            color: #666;
-                            margin-top: 2px;
-                          }
-                          
                           /* Data Flow Lines */
                           .data-flow-container {
                             position: absolute;
@@ -443,6 +422,7 @@
                             width: 100%;
                             height: 100%;
                             pointer-events: none;
+                            z-index: 1;
                           }
                           
                           .data-line {
@@ -453,29 +433,8 @@
                             transform: scaleX(0);
                           }
                           
-                          .line1 {
-                            top: 120px;
-                            left: 270px;
-                            width: calc(100% - 500px);
-                            animation: grow-line 2s forwards, pulse-opacity 3s infinite;
-                            animation-delay: 1s, 3s;
-                          }
-                          
-                          .line2 {
-                            top: 200px;
-                            right: 260px;
-                            width: 200px;
-                            transform-origin: right center;
-                            animation: grow-line-reverse 2s forwards, pulse-opacity 3s infinite;
-                            animation-delay: 1.3s, 3.3s;
-                          }
-                          
-                          .line3 {
-                            top: 260px;
-                            left: 300px;
-                            width: calc(50% - 300px);
-                            animation: grow-line 2s forwards, pulse-opacity 3s infinite;
-                            animation-delay: 1.6s, 3.6s;
+                          .line1, .line2, .line3 {
+                            display: none;
                           }
                           
                           .data-dot {
@@ -487,32 +446,8 @@
                             transform: scale(0);
                           }
                           
-                          .dot1 {
-                            top: 120px;
-                            left: 270px;
-                            animation: grow-dot 0.3s forwards, pulse-scale 2s infinite;
-                            animation-delay: 1s, 2s;
-                          }
-                          
-                          .dot2 {
-                            top: 120px;
-                            right: 270px;
-                            animation: grow-dot 0.3s forwards, pulse-scale 2s infinite;
-                            animation-delay: 2s, 3s;
-                          }
-                          
-                          .dot3 {
-                            top: 200px;
-                            right: 260px;
-                            animation: grow-dot 0.3s forwards, pulse-scale 2s infinite;
-                            animation-delay: 1.3s, 2.3s;
-                          }
-                          
-                          .dot4 {
-                            top: 260px;
-                            left: 300px;
-                            animation: grow-dot 0.3s forwards, pulse-scale 2s infinite;
-                            animation-delay: 1.6s, 2.6s;
+                          .dot1, .dot2, .dot3, .dot4 {
+                            display: none;
                           }
                           
                           /* Animations */
@@ -554,44 +489,6 @@
                             }
                           }
                           
-                          @keyframes slide-in-left {
-                            0% {
-                              opacity: 0;
-                              transform: translateX(50px);
-                            }
-                            100% {
-                              opacity: 1;
-                              transform: translateX(0);
-                            }
-                          }
-                          
-                          @keyframes grow-line {
-                            0% {
-                              transform: scaleX(0);
-                            }
-                            100% {
-                              transform: scaleX(1);
-                            }
-                          }
-                          
-                          @keyframes grow-line-reverse {
-                            0% {
-                              transform: scaleX(0);
-                            }
-                            100% {
-                              transform: scaleX(1);
-                            }
-                          }
-                          
-                          @keyframes grow-dot {
-                            0% {
-                              transform: scale(0);
-                            }
-                            100% {
-                              transform: scale(1);
-                            }
-                          }
-                          
                           @keyframes pulse-opacity {
                             0%, 100% {
                               opacity: 0.4;
@@ -610,12 +507,118 @@
                             }
                           }
                           
-                          @keyframes count-up {
-                            from {
-                              content: "0";
+                          /* Desktop Layout */
+                          @media (min-width: 768px) {
+                            .management-animation {
+                              display: block;
+                              padding: 0;
                             }
-                            to {
-                              content: attr(data-target);
+                            
+                            .chart {
+                              position: absolute;
+                              margin: 0;
+                            }
+                            
+                            .attendance-chart {
+                              top: 30px;
+                              left: 30px;
+                            }
+                            
+                            .fees-chart {
+                              top: 0px;
+                              right: 40px;
+                            }
+                            
+                            .data-card {
+                              position: absolute;
+                              bottom: -10px;
+                              left: 50%;
+                              transform: translateX(-50%) translateY(20px);
+                              margin: 0;
+                            }
+                            
+                            .line1, .line2, .line3, .dot1, .dot2, .dot3, .dot4 {
+                              display: block;
+                            }
+                            
+                            .line1 {
+                              top: 120px;
+                              left: 270px;
+                              width: calc(100% - 500px);
+                              animation: grow-line 2s forwards, pulse-opacity 3s infinite;
+                              animation-delay: 1s, 3s;
+                            }
+                            
+                            .line2 {
+                              top: 200px;
+                              right: 260px;
+                              width: 200px;
+                              transform-origin: right center;
+                              animation: grow-line-reverse 2s forwards, pulse-opacity 3s infinite;
+                              animation-delay: 1.3s, 3.3s;
+                            }
+                            
+                            .line3 {
+                              top: 260px;
+                              left: 300px;
+                              width: calc(50% - 300px);
+                              animation: grow-line 2s forwards, pulse-opacity 3s infinite;
+                              animation-delay: 1.6s, 3.6s;
+                            }
+                            
+                            .dot1 {
+                              top: 120px;
+                              left: 270px;
+                              animation: grow-dot 0.3s forwards, pulse-scale 2s infinite;
+                              animation-delay: 1s, 2s;
+                            }
+                            
+                            .dot2 {
+                              top: 70px;
+                              right: 270px;
+                              animation: grow-dot 0.3s forwards, pulse-scale 2s infinite;
+                              animation-delay: 2s, 3s;
+                            }
+                            
+                            .dot3 {
+                              top: 260px;
+                              right: 260px;
+                              animation: grow-dot 0.3s forwards, pulse-scale 2s infinite;
+                              animation-delay: 1.3s, 2.3s;
+                            }
+                            
+                            dot4 {
+                              top: 260px;
+                              right: 300px;
+                              animation: grow-dot 0.3s forwards, pulse-scale 2s infinite;
+                              animation-delay: 1.6s, 2.6s;
+                            }
+                            
+                            @keyframes grow-line {
+                              0% {
+                                transform: scaleX(0);
+                              }
+                              100% {
+                                transform: scaleX(1);
+                              }
+                            }
+                            
+                            @keyframes grow-line-reverse {
+                              0% {
+                                transform: scaleX(0);
+                              }
+                              100% {
+                                transform: scaleX(1);
+                              }
+                            }
+                            
+                            @keyframes grow-dot {
+                              0% {
+                                transform: scale(0);
+                              }
+                              100% {
+                                transform: scale(1);
+                              }
                             }
                           }
                         </style>
@@ -659,6 +662,289 @@
                           }
                         </script>
                       </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Four Pillars of SchoLift <span class="development-badge">Under Development</span></h2>
+                <p>Our solution focuses on four key areas that will transform how schools in Bihar operate.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Attendance System</h3>
+                    <p>The simplest and most efficient digital attendance system for schools in Bihar. Teachers can mark attendance with just a tap, saving valuable time.</p>
+                    <ul class="feature-list">
+                        <li>One-tap attendance marking</li>
+                        <li>Automatic absence notifications to parents</li>
+                        <li>Comprehensive attendance reports</li>
+                    </ul>
+                    <div class="coming-soon-badge">Coming Soon</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>Fees System</h3>
+                    <p>A fee management system designed for schools that handle both online and offline payments, making it effortless for staff to manage.</p>
+                    <ul class="feature-list">
+                        <li>Supports both online and offline payments</li>
+                        <li>Automatic payment receipts</li>
+                        <li>Fee reminder system for parents</li>
+                    </ul>
+                    <div class="coming-soon-badge">Coming Soon</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>Automation</h3>
+                    <p>Our unique messaging system notifies parents about fees and absent students via WhatsApp and SMS—no app download required.</p>
+                    <ul class="feature-list">
+                        <li>WhatsApp & SMS notifications</li>
+                        <li>Automated fee reminders</li>
+                        <li>Absence alerts to parents</li>
+                    </ul>
+                    <div class="coming-soon-badge">Coming Soon</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Promotion</h3>
+                    <p>Student promotion to the next class is extremely simple, supports all types of roll number allocation systems, and doesn't require manual data entry.</p>
+                    <ul class="feature-list">
+                        <li>One-click class promotions</li>
+                        <li>Flexible roll number allocation</li>
+                        <li>Automated record updates</li>
+                    </ul>
+                    <div class="coming-soon-badge">Coming Soon</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Schools Need SchoLift Section -->
+    <section id="why-scholift" class="why-scholift-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Schools in Bihar Need SchoLift</h2>
+                <p>We understand the unique challenges faced by schools in Bihar and are building a solution that addresses these specific needs.</p>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-icon"><i class="fas fa-money-bill-wave"></i></div>
+                    <div class="step-content">
+                        <h3>No More Cash Handling</h3>
+                        <p>Eliminate errors, theft, and reconciliation headaches with our digital payment system.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="step-content">
+                        <h3>Simplest Attendance System</h3>
+                        <p>Mark attendance with just a tap, saving valuable classroom time for teaching.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="step-content">
+                        <h3>No Technical Team Required</h3>
+                        <p>Easy to set up and manage, designed specifically for schools without IT staff.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="step-content">
+                        <h3>Parents Stay Informed</h3>
+                        <p>Updates via WhatsApp and SMS — no app download required for parents.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-icon"><i class="fas fa-database"></i></div>
+                    <div class="step-content">
+                        <h3>Seamless Data Migration</h3>
+                        <p>Easily transfer your existing student records with no extra effort needed.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <div class="step-content">
+                        <h3>Teacher-Friendly Design</h3>
+                        <p>Specially designed for non-technical staff, with a focus on simplicity and ease of use.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-container">
+                <h3>Discuss Your School's Needs: <a href="tel:+919334007868">+91 93340 07868</a></h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Built for Bihar Section -->
+    <section class="built-for-bihar-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Built for Bihar's School Ecosystem</h2>
+                <p>We're developing SchoLift with a deep understanding of the challenges faced by schools in Bihar.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <h3>Uniquely Designed for Bihar's Educational Landscape</h3>
+                    <p>SchoLift is being built specifically for private schools in Bihar's Tier 2 & Tier 3 cities, addressing the unique challenges and needs of the local educational ecosystem.</p>
+                    <ul class="feature-list">
+                        <li>User-friendly interface for non-technical staff</li>
+                        <li>Works with or without reliable internet connectivity</li>
+                        <li>Accommodates local payment methods and preferences</li>
+                        <li>Multilingual support for regional languages</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cta-container">
+                <a href="tel:+919334007868" class="btn btn-primary">Call Us to Know More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions <span class="development-badge">Coming Soon</span></h2>
+                <p>Common questions about our upcoming school management system for Bihar schools.</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>When will SchoLift be available for schools in Bihar?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SchoLift is currently under development specifically for Bihar schools. We're working diligently to bring this platform to you soon. Contact us to receive updates on our launch timeline.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do schools need special technical infrastructure to use SchoLift?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, SchoLift is designed to work with minimal technical requirements. A basic computer or tablet with internet access is sufficient. The system is specifically built for schools without dedicated IT staff.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How will parents receive updates without downloading an app?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Parents will receive updates via WhatsApp and SMS messages directly to their phones. There's no need for parents to download or learn a new app, making the system accessible to all parents regardless of their technical proficiency.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Will training be provided to school staff?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we provide comprehensive training to all school staff. The system is designed to be intuitive and user-friendly, with a focus on simplicity for non-technical users. Our team will ensure your staff is comfortable using all features.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How can we migrate our existing school records to SchoLift?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SchoLift includes a seamless data migration system. We'll help you transfer all your existing student records, whether they're in digital format or paper-based. The process is designed to be simple and require minimal effort from your staff.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-container">
+                <h3>Have more questions about SchoLift for your school in Bihar?</h3>
+                <a href="tel:+919334007868" class="btn btn-primary">Contact Us: +91 93340 07868</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us <span class="development-badge">Website Under Development</span></h2>
+                <p>SchoLift is currently being developed specifically for Bihar schools. For inquiries, please contact us directly by phone.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Our Location</h3>
+                            <p>Patna, Bihar, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p><a href="tel:+919334007868">+91 9334007868</a></p>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="tel:+919334007868" class="btn btn-primary">Contact Us Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>SchoLift</h2>
+                    <p>Empowering Education in Bihar Through Technology <span class="coming-soon-badge">Coming Soon</span></p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#why-scholift">Why SchoLift</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SchoLift - Bihar Schools Initiative. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
                 </div>
             </div>
         </div>
