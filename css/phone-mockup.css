@@ -1,0 +1,314 @@
+/* Phone Mockup Styles for Comparison Section */
+.phone-mockup {
+    width: 280px;
+    height: 500px;
+    background-color: #111;
+    border-radius: 30px;
+    padding: 10px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    animation: float 6s ease-in-out infinite, pulse 8s ease-in-out infinite;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    transform: perspective(1000px) rotateY(-5deg);
+}
+
+.phone-frame {
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.notification-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.notification {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slide-in 0.5s forwards, float-subtle 4s ease-in-out infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.notification:hover {
+    transform: translateX(-5px) translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-notification {
+    animation-delay: 1s, 1.5s;
+}
+
+.fee-notification {
+    animation-delay: 2s, 2.5s;
+}
+
+.notification-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.attendance-notification .notification-icon {
+    background-color: #25D366;
+    color: #ffffff;
+}
+
+.fee-notification .notification-icon {
+    background-color: #00BCD4;
+    color: #ffffff;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333333;
+}
+
+.notification-message {
+    font-size: 0.9rem;
+    color: #666666;
+}
+
+/* Teacher Dashboard Styles */
+.teacher-dashboard {
+    width: 350px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fade-in-up 0.5s forwards 0.5s, float 6s ease-in-out infinite 1s;
+}
+
+.dashboard-header {
+    background-color: #25D366;
+    color: #ffffff;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dashboard-content {
+    padding: 20px;
+}
+
+.attendance-panel {
+    width: 100%;
+}
+
+.panel-title {
+    background-color: #e8f5e9;
+    color: #333333;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.student-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.student-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+.student-item:hover {
+    background-color: #f0f0f0;
+}
+
+.student-name {
+    font-weight: 500;
+    color: #333333;
+}
+
+.attendance-mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.present {
+    background-color: #e8f5e9;
+    color: #25D366;
+}
+
+.absent {
+    background-color: #ffebee;
+    color: #f44336;
+}
+
+/* Animations */
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes float-subtle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1) perspective(1000px) rotateY(-5deg);
+    }
+    50% {
+        transform: scale(1.02) perspective(1000px) rotateY(-3deg);
+    }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .animation-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .phone-mockup {
+        width: 240px;
+        height: 420px;
+    }
+    
+    .teacher-dashboard {
+        width: 300px;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .phone-mockup {
+        width: 200px;
+        height: 350px;
+        border-radius: 25px;
+        padding: 8px;
+    }
+    
+    .phone-frame {
+        border-radius: 18px;
+    }
+    
+    .notification {
+        padding: 10px;
+    }
+    
+    .notification-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+    
+    .notification-title {
+        font-size: 0.85rem;
+    }
+    
+    .notification-message {
+        font-size: 0.75rem;
+    }
+    
+    .teacher-dashboard {
+        width: 250px;
+    }
+    
+    .dashboard-header {
+        padding: 10px 15px;
+        font-size: 1.1rem;
+    }
+    
+    .dashboard-content {
+        padding: 15px;
+    }
+    
+    .panel-title {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .student-item {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+    
+    .attendance-mark {
+        width: 25px;
+        height: 25px;
+    }
+}
