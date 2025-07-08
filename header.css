@@ -1,0 +1,125 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --primary-green: #25D366; /* WhatsApp Green */
+    --light-blue: #E0F7FA;
+    --dark-text: #333333;
+    --white-color: #FFFFFF;
+    --header-height: 70px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    padding-top: var(--header-height); /* Prevent content from hiding behind fixed header */
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-text);
+}
+
+ul {
+    list-style: none;
+}
+
+.main-header {
+    background-color: var(--white-color);
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--dark-text);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-green);
+}
+
+.nav-cta-button {
+    background-color: var(--primary-green);
+    color: var(--white-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.nav-cta-button:hover {
+    background-color: #1EAE54;
+    color: var(--white-color);
+}
+
+.hamburger-icon {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark-text);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--white-color);
+        transition: left 0.4s ease-in-out;
+    }
+
+    .nav-menu.active { left: 0; }
+    .nav-link { font-size: 1.5rem; }
+    .hamburger-icon { display: block; }
+
+    .hamburger-icon.active .bar1 { transform: rotate(-45deg) translate(-5px, 6px); }
+    .hamburger-icon.active .bar2 { opacity: 0; }
+    .hamburger-icon.active .bar3 { transform: rotate(45deg) translate(-5px, -6px); }
+}

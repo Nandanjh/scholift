@@ -1,0 +1,781 @@
+/*
+==================================================
+Scholift Product Page Stylesheet
+==================================================
+
+TABLE OF CONTENTS
+------------------
+1.  RESET & GLOBAL STYLES
+2.  VARIABLES & TYPOGRAPHY
+3.  REUSABLE COMPONENTS (Buttons, Grids)
+4.  HEADER & NAVIGATION (User's updated code)
+5.  FOOTER
+6.  SECTION STYLING (Hero, Features, etc.)
+7.  WAVE DIVIDER
+8.  ANIMATION STYLES
+9.  MEDIA QUERIES (Responsiveness)
+
+*/
+
+/* 1. RESET & GLOBAL STYLES */
+/* ================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #333;
+    background-color: var(--color-background);
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    padding-top: var(--header-height); 
+}
+
+/* 2. VARIABLES & TYPOGRAPHY */
+/* ================================================== */
+:root {
+    /* Colors from original stylesheet */
+    --color-primary: #25D366;
+    --color-primary-dark: #128C7E;
+    --color-accent: #34B7F1;
+    --color-background: #FFFFFF;
+    --color-text: #333333;
+    --color-text-light: #555555;
+    --color-grey-light: #f7f7f7;
+    --color-grey-border: #e0e0e0;
+    --color-footer-bg: #1f2937;
+    --color-footer-text: #d1d5db;
+    --color-footer-heading: #ffffff;
+
+    /* CSS Variables for Header from user */
+    --primary-green: #25D366;
+    --primary-green-darker: #1EAE54;
+    --light-blue-bg: #F0F8FF; 
+    --dark-text: #333;
+    --white-color: #FFFFFF;
+    --header-height: 80px;
+    --header-z-index: 1000;
+
+    /* Shadows */
+    --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -0.5px;
+}
+
+.heading-primary {
+    font-size: 4.4rem;
+    line-height: 1.1;
+    margin-bottom: 2.4rem;
+}
+
+.heading-secondary {
+    font-size: 3.6rem;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
+}
+
+.heading-tertiary {
+    font-size: 2.4rem;
+    margin-bottom: 1.6rem;
+}
+
+p {
+    font-size: 1.6rem;
+    color: var(--color-text-light);
+    margin-bottom: 1.6rem;
+}
+
+/* 3. REUSABLE COMPONENTS */
+/* ================================================== */
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+
+.section {
+    padding: 9.6rem 0;
+    border-bottom: 1px solid var(--color-grey-light);
+}
+
+.grid {
+    display: grid;
+    gap: 6.4rem;
+    align-items: center;
+}
+
+.grid-two-cols {
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-three-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.4rem 2.8rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 9px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn i {
+    margin-left: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover i {
+    transform: translateX(4px);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    box-shadow: inset 0 0 0 2px var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* 4. HEADER & NAVIGATION (User's updated code) */
+/* ================================================== */
+.main-header {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    z-index: var(--header-z-index);
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-size: 1.6rem; /* Adjusted from 1rem for consistency */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-green);
+}
+
+.nav-cta-button {
+    background-color: var(--primary-green);
+    color: var(--white-color) !important;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.nav-cta-button:hover {
+    background-color: var(--primary-green-darker);
+    transform: translateY(-2px);
+}
+
+.hamburger-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: calc(var(--header-z-index) + 1);
+    padding: 10px;
+}
+
+.hamburger-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark-text);
+    margin: 3px 0;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    display: block;
+}
+
+.hamburger-icon.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+
+/* 5. FOOTER */
+/* ================================================== */
+.site-footer {
+    background-color: var(--color-footer-bg);
+    color: var(--color-footer-text);
+    padding: 6.4rem 0;
+    font-size: 1.4rem;
+    border-bottom: none; /* Remove border from .section rule */
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 4.8rem;
+    margin-bottom: 4.8rem;
+}
+
+.footer-heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-footer-heading);
+    margin-bottom: 1.6rem;
+}
+
+.footer-about {
+    color: var(--color-footer-text);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.footer-links a {
+    color: var(--color-footer-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom-bar {
+    border-top: 1px solid #374151; /* Darker grey border */
+    padding-top: 3.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+}
+
+.footer-copyright {
+    color: var(--color-footer-text);
+    margin: 0;
+}
+
+.footer-social {
+    display: flex;
+    gap: 2.4rem;
+}
+
+.footer-social a {
+    color: var(--color-footer-text);
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--color-primary);
+}
+
+
+/* 6. SECTION STYLING */
+/* ================================================== */
+
+/* --- Hero Section --- */
+.section-hero {
+    background-color: var(--color-grey-light);
+    padding: 6.4rem 0 12.8rem 0;
+}
+.hero-description {
+    font-size: 2rem;
+    margin-bottom: 3.2rem;
+}
+.hero-subtext {
+    margin-top: 1.6rem;
+    font-size: 1.4rem;
+    font-style: italic;
+}
+.hero-img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--shadow-medium);
+}
+
+/* --- Features Section --- */
+.feature-img, .why-img, .micro-img, .proof-img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+}
+.feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    margin-bottom: 3.2rem;
+}
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.6rem;
+}
+.feature-icon {
+    font-size: 2.4rem;
+    color: var(--color-primary);
+    margin-top: 0.5rem;
+}
+.feature-list h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+/* --- Why Scholift Section --- */
+.section-why {
+    background-color: var(--color-background);
+}
+.why-list {
+    list-style: none;
+    margin-bottom: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.why-list li {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+.why-list i {
+    color: var(--color-accent);
+}
+
+/* --- Microfeatures Section --- */
+.section-microfeatures {
+    background-color: var(--color-grey-light);
+}
+.micro-list {
+    list-style: none;
+    columns: 2;
+    column-gap: 2.4rem;
+    margin-bottom: 3.2rem;
+}
+.micro-list li {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.micro-list i {
+    color: var(--color-primary);
+}
+
+/* --- Showcase Section --- */
+.section-showcase {
+    padding: 6.4rem 0;
+}
+.showcase-img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--shadow-medium);
+}
+.showcase-caption {
+    text-align: center;
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-top: 2.4rem;
+    color: var(--color-text);
+}
+
+/* --- Pricing Section --- */
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.6rem;
+    box-shadow: var(--shadow-soft);
+    border-radius: 9px;
+    overflow: hidden;
+}
+.pricing-table th, .pricing-table td {
+    padding: 1.6rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-grey-border);
+}
+.pricing-table th {
+    background-color: var(--color-primary);
+    color: #fff;
+    font-weight: 600;
+}
+.pricing-table tr:last-child td {
+    border-bottom: none;
+}
+.pricing-table td:last-child {
+    font-weight: 700;
+    color: var(--color-primary-dark);
+}
+.pricing-description {
+    font-size: 1.8rem;
+    margin-bottom: 3.2rem;
+}
+
+/* --- Proof Section --- */
+.section-proof {
+    background-color: var(--color-grey-light);
+}
+blockquote {
+    font-size: 2.4rem;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.4;
+    margin-bottom: 2.4rem;
+    padding-left: 2rem;
+    border-left: 4px solid var(--color-accent);
+}
+blockquote cite {
+    display: block;
+    font-size: 1.6rem;
+    margin-top: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+}
+.proof-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 3.2rem;
+}
+.proof-list li {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+.proof-list i {
+    color: var(--color-primary);
+}
+
+/* --- Use Cases Section --- */
+.use-case-cards {
+    margin-top: 6.4rem;
+}
+.card {
+    background-color: #fff;
+    padding: 3.2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+.card-icon {
+    font-size: 3.2rem;
+    color: var(--color-primary);
+    margin-bottom: 1.6rem;
+    background-color: var(--color-grey-light);
+    width: 6.4rem;
+    height: 6.4rem;
+    line-height: 6.4rem;
+    border-radius: 50%;
+    display: inline-block;
+}
+.card h3 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+/* --- Final CTA Section --- */
+.section-cta {
+    padding: 9.6rem 0;
+    background-color: var(--color-primary-dark);
+    border-bottom: none;
+}
+.cta-banner {
+    background-color: var(--color-primary);
+    padding: 6.4rem;
+    border-radius: 12px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4.8rem;
+}
+.cta-banner h2 {
+    font-size: 3.2rem;
+    color: #fff;
+    margin-bottom: 1.6rem;
+}
+.cta-banner p {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2.4rem;
+}
+.cta-banner .btn-primary {
+    background-color: #fff;
+    color: var(--color-primary);
+}
+.cta-banner .btn-primary:hover {
+    background-color: var(--color-grey-light);
+}
+.cta-image img {
+    width: 20rem;
+    height: auto;
+}
+
+/* 7. WAVE DIVIDER */
+/* ================================================== */
+.wave-divider {
+    width: 100%;
+    height: 100px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' style='fill:%23f7f7f7;'%3E%3C/path%3E%3C/svg%3E");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -1px; /* Overlap fix */
+}
+.reverse-wave {
+    transform: scaleY(-1);
+}
+
+/* 8. ANIMATION STYLES */
+/* ================================================== */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+/* Default animation: fade up */
+.animate-on-scroll {
+    transform: translateY(30px);
+}
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 9. MEDIA QUERIES (Responsiveness) */
+/* ================================================== */
+
+/* Below 992px (Tablets) */
+@media (max-width: 62em) {
+    html {
+        font-size: 56.25%; /* 1rem = 9px */
+    }
+    .grid-two-cols {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .hero-text-box {
+        order: 2;
+    }
+    .hero-image-box {
+        order: 1;
+    }
+    .reverse-grid {
+        grid-template-columns: 1fr;
+    }
+    .reverse-grid .feature-image-box, 
+    .reverse-grid .micro-image-box,
+    .reverse-grid .proof-image-box {
+        order: 1;
+    }
+    .reverse-grid .feature-text-box,
+    .reverse-grid .micro-text-box,
+    .reverse-grid .proof-text-box {
+        order: 2;
+    }
+    .hero-img, .feature-img, .why-img, .micro-img, .proof-img {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .pricing-text-box {
+        text-align: center;
+    }
+    .cta-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cta-image {
+        display: none; /* Hide image on smaller screens for cleaner CTA */
+    }
+    .footer-grid {
+        text-align: left;
+    }
+}
+
+/* Below 768px (Large Phones & Tablets in Portrait) */
+@media (max-width: 768px) {
+    html {
+        font-size: 50%; /* 1rem = 8px */
+    }
+    .section {
+        padding: 8rem 0;
+    }
+    .container {
+        padding: 0 2.4rem;
+    }
+    .grid-three-cols {
+        grid-template-columns: 1fr;
+    }
+    .micro-list {
+        columns: 1;
+    }
+    .cta-banner {
+        padding: 4.8rem;
+    }
+    
+    /* Mobile Navigation */
+    .hamburger-icon {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        transition: left 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        z-index: calc(var(--header-z-index) - 1);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .nav-menu .nav-link {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: var(--dark-text);
+    }
+    
+    .nav-menu .nav-cta-button {
+        font-size: 1.2rem;
+        padding: 15px 30px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .footer-bottom-bar {
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+}
+
+/* Below 576px (Small Phones) */
+@media (max-width: 36em) {
+    .heading-primary {
+        font-size: 3.6rem;
+    }
+    .heading-secondary {
+        font-size: 2.8rem;
+    }
+    .btn {
+        padding: 1.2rem 2.4rem;
+        font-size: 1.8rem; /* Make buttons easier to tap */
+    }
+    .hero-img, .feature-img, .why-img, .micro-img, .proof-img {
+        width: 100%;
+    }
+}
